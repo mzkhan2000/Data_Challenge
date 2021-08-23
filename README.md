@@ -69,6 +69,13 @@ Appointments = pd.concat(dataframes_list)
 
 Appointments.head()
 
+	Patient ID	ApptDate	Result
+0	284414	30/12/2019	*NOT DETECTED CHLAMYDIA
+1	720514	8/09/2019	SYPHILIS ***DETECTED***
+2	144037	26/01/2019	301 chlamydia ***NOT DETECTED*** 301 301
+3	906764	17/06/2019	*NOT DETECTED CHLAMYDIA
+4	391327	12/06/2019	chlamydia not detected
+
 ```
 
 4. Appointments also has a column called Result which contains the terms “Chlamydia” and “detected”
