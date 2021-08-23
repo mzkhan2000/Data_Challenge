@@ -13,7 +13,10 @@ import pandas as pd
 import os
 import glob
 import numpy as np
+```
+1. Read Patients.csv into memory in an object called Patients
 
+```python
 # importing csv files to the repositery as data frames/ -Monir
 Patients = pd.read_csv("Patients.csv")
 
