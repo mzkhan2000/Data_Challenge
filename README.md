@@ -18,13 +18,15 @@ import numpy as np
 Patients = pd.read_csv("Patients.csv")
 
 Patients.head()
-```
+
 PatientID	Site	AgeGroup
 0	866951	K	15-19
 1	120640	C	50+
 2	358689	K	50+
 3	295376	Y	40-49
 4	211916	L	25-29
+```
+
 
 
 **PUBLIC_DISPATCHSCADA_df contains 3,326,960 rows × 6 columns**
