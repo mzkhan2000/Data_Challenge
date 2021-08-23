@@ -21,7 +21,8 @@ import numpy as np
 Patients = pd.read_csv("Patients.csv")
 
 Patients.head()
-
+```
+```sql
 PatientID	Site	AgeGroup
 0	866951	K	15-19
 1	120640	C	50+
