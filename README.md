@@ -1,12 +1,5 @@
 # Data_Challenge
 
-# 1. Fetch and Clean the data using Python-Pandas
-### 1.1 Fetch all 8,891 datasets from PUBLIC_DISPATCHSCADA data.
-
-**For PUBLIC_DISPATCHSCADA data 8,891 files are extracted in a single folder** 
-
-Python-Pandas necessary code for fetching the data from PUBLIC_DISPATCHSCADA data
-
 ```python
 # import necessary libraries - Monir
 import pandas as pd
