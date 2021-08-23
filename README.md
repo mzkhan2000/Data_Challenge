@@ -81,9 +81,10 @@ otherwise.**
 ```python
 # A new column is created called CHL
 Appointments['CHL']="NA"
+```
 
-Appointments.loc[(Appointments['Result'].astype(str).str.contains("Chlamydia") & Appointments['Result'].astype(str).str.contains("detected")), 'CHL'] = 1
-
+```python
+Appointments.loc[(Appointments['Result'].astype(str).str.contains("Chlamydia", na=False, case=False) & Appointments['Result'].astype(str).str.contains("detected", na=False, case=False) & ~Appointments['Result'].astype(str).str.contains("not", na=False, case=False)), 'CHL'] = 1
 
 ```
 
