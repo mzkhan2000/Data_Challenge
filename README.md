@@ -68,7 +68,8 @@ for i in range(len(list_of_files)):
 Appointments = pd.concat(dataframes_list)
 
 Appointments.head()
-
+```
+```sql
 	Patient ID	ApptDate	Result
 0	284414	30/12/2019	*NOT DETECTED CHLAMYDIA
 1	720514	8/09/2019	SYPHILIS ***DETECTED***
