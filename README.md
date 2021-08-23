@@ -80,7 +80,8 @@ otherwise.**
 
 ```python
 
-Here....
+Appointments.loc[(Appointments['Result'].astype(str).str.contains("Chlamydia") & Appointments['Result'].astype(str).str.contains("detected")), 'CHL'] = 1
+
 
 ```
 
