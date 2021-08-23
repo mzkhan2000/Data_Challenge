@@ -79,6 +79,8 @@ or “not detected”. Create a new column called CHL which which value is equal
 otherwise.**
 
 ```python
+# A new column is created called CHL
+Appointments['CHL']="NA"
 
 Appointments.loc[(Appointments['Result'].astype(str).str.contains("Chlamydia") & Appointments['Result'].astype(str).str.contains("detected")), 'CHL'] = 1
 
