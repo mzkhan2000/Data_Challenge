@@ -7,7 +7,7 @@ import os
 import glob
 import numpy as np
 ```
-1. Read Patients.csv into memory in an object called Patients
+**1. Read Patients.csv into memory in an object called Patients**
 
 ```python
 # importing csv files to the repositery as data frames/ -Monir
@@ -23,9 +23,9 @@ PatientID	Site	AgeGroup
 3	295376	Y	40-49
 4	211916	L	25-29
 ```
-2. Patients has a column called PatientID which contains 6 digit code for patients except for a few test
+**2. Patients has a column called PatientID which contains 6 digit code for patients except for a few test
 patients with only 4 digit code. Identify these test patients with 4 digit PatientID and remove these
-rows.
+rows.**
 
 ```python
 
@@ -36,8 +36,8 @@ Test_patients = Patients.loc[Patients['PatientID'].astype(str).str.len() == 4]
 Patients = Patients.loc[Patients['PatientID'].astype(str).str.len() == 6]
 
 ```
-3. Read Appointments_2019.csv, Appointments_2020.csv and Appointments_20201.csv into memory
-and append together into an object called Appointments
+**3. Read Appointments_2019.csv, Appointments_2020.csv and Appointments_20201.csv into memory
+and append together into an object called Appointments**
 
 ```python
 
@@ -73,10 +73,10 @@ Appointments.head()
 
 ```
 
-4. Appointments also has a column called Result which contains the terms “Chlamydia” and “detected”
+**4. Appointments also has a column called Result which contains the terms “Chlamydia” and “detected”
 or “not detected”. Create a new column called CHL which which value is equal to 1 if the words
 “Chlamydia” and “detected” is in Result, 0 if “Chlamydia” and “not detected” is in Result, and NA
-otherwise.
+otherwise.**
 
 ```python
 
@@ -84,8 +84,8 @@ Here....
 
 ```
 
-5. Left join the Appointments data frame to Patients data frame using the keys PatientID in Patients
-and Patient ID in Appointments. Assign this joined data to object called Visits.
+**5. Left join the Appointments data frame to Patients data frame using the keys PatientID in Patients
+and Patient ID in Appointments. Assign this joined data to object called Visits.**
 
 ```python
 
