@@ -88,6 +88,11 @@ Appointments.loc[(Appointments['Result'].astype(str).str.contains("Chlamydia", n
 
 ```
 
+```python
+Appointments.loc[(Appointments['Result'].astype(str).str.contains("Chlamydia", na=False, case=False) & Appointments['Result'].astype(str).str.contains("detected", na=False, case=False) & Appointments['Result'].astype(str).str.contains("not", na=False, case=False)), 'CHL'] = 1
+
+```
+
 **5. Left join the Appointments data frame to Patients data frame using the keys PatientID in Patients
 and Patient ID in Appointments. Assign this joined data to object called Visits.**
 
