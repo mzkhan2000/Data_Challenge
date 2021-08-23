@@ -47,7 +47,27 @@ and append together into an object called Appointments
 
 ```python
 
+# assign dataset names - Monir
+list_of_files = []
 
+# all dataset names with starting Appointments - Monir
+list_of_files = glob.glob('Appointments*.csv')
+
+# all dataset names with starting Appointments - Monir
+list_of_files = glob.glob('Appointments*.csv')
+
+# create empty list
+dataframes_list = []
+
+# append datasets into teh list
+for i in range(len(list_of_files)):
+    temp_df = pd.read_csv(list_of_files[i])
+    dataframes_list.append(temp_df)
+
+
+Appointments = pd.concat(dataframes_list)
+
+Appointments.head()
 
 ```
 
