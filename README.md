@@ -1,6 +1,4 @@
 # Data_Challenge
-# AEMO-data-Analytics
-AEMO-data-Analytics
 
 # 1. Fetch and Clean the data using Python-Pandas
 ### 1.1 Fetch all 8,891 datasets from PUBLIC_DISPATCHSCADA data.
@@ -16,31 +14,8 @@ import os
 import glob
 import numpy as np
 
-# assign dataset names - Monir
-PUBLIC_DISPATCHSCADA_list_of_files = []
-
-# all dataset names with starting PUBLIC_DISPATCHSCADA - Monir
-PUBLIC_DISPATCHSCADA_list_of_files = glob.glob('PUBLIC_DISPATCHSCADA*.csv')
-
-# create empty list
-dataframes_list = []
-
-list_of_names = PUBLIC_DISPATCHSCADA_list_of_files
-
-# append datasets into teh list - Monir
-for i in range(len(list_of_names)):
-    temp_df = pd.read_csv(list_of_names[i], skiprows = 1, skipfooter = 1)
-    #dataframes_list[i]=temp_df
-    dataframes_list.append(temp_df)
-
-# multiple DataFrames are be merged (Concatenate pandas objects) - Monir
-PUBLIC_DISPATCHSCADA_df = pd.concat(dataframes_list)
-
-# set a specific column of DataFrame as index - Monir
-PUBLIC_DISPATCHSCADA_df.set_index('DUID')
-
-# Export Pandas DataFrame to CSV - Monir
-PUBLIC_DISPATCHSCADA_df.to_csv('PUBLIC_DISPATCHSCADA_df.csv', index=False)
+# importing csv files to the repositery as data frames/ -Monir
+Patients = pd.read_csv("Patients.csv")
 ```
 **PUBLIC_DISPATCHSCADA_df contains 3,326,960 rows × 6 columns**
 
