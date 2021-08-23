@@ -35,7 +35,11 @@ rows.
 
 ```python
 
-Here....
+# test patients with only 4 digit code
+Test_patients = Patients.loc[Patients['PatientID'].astype(str).str.len() == 4]
+
+# After removed test patients 
+Patients = Patients.loc[Patients['PatientID'].astype(str).str.len() == 6]
 
 ```
 3. Read Appointments_2019.csv, Appointments_2020.csv and Appointments_20201.csv into memory
@@ -43,7 +47,7 @@ and append together into an object called Appointments
 
 ```python
 
-Here....
+
 
 ```
 
